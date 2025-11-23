@@ -1,619 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Anshul Bagaria</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/fav.png" rel="icon">
-  <link href="assets/img/apple-touch-A.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Portfolio - PhD Application</title>
+  <meta name="description" content="Professional academic portfolio for PhD application">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Anshul Bagaria</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="http://www.linkedin.com/in/anshul-bagaria" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/anshul-2010" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.instagram.com/anshul_bagaria_123/" class="instagram"><i class="bi bi-instagram"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#location"><i class="bi bi-geo-alt-fill navicon"></i> Location</a></li>
-      </ul>
+<body class="bg-gray-50 text-gray-900">
+  
+  <!-- Fixed Navigation Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <h1 class="text-xl sm:text-2xl font-bold text-gray-900">Dr. Sarah Chen</h1>
+          <span class="ml-3 text-sm text-gray-600 hidden sm:inline">Ph.D. Candidate in Computer Science</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+          <a href="#research" class="text-gray-700 hover:text-indigo-600 transition-colors">Research</a>
+          <a href="#publications" class="text-gray-700 hover:text-indigo-600 transition-colors">Publications</a>
+          <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition-colors">Experience</a>
+          <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-indigo-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </nav>
-
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="max-w-5xl mx-auto px-4 py-4 space-y-3">
+        <a href="#home" class="block text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+        <a href="#research" class="block text-gray-700 hover:text-indigo-600 transition-colors">Research</a>
+        <a href="#publications" class="block text-gray-700 hover:text-indigo-600 transition-colors">Publications</a>
+        <a href="#experience" class="block text-gray-700 hover:text-indigo-600 transition-colors">Experience</a>
+        <a href="#contact" class="block text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/main_profile.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Anshul Bagaria</h2>
-        <p>I'm <span class="typed" data-typed-items="Deep Learning Researcher, AI Innovator, Computer Vision Specialist, ML Developer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>I am Anshul Bagaria, an aspiring AI researcher and technology enthusiast currently pursuing a B. Tech in Biological Engineering and an M. Tech in Data Science at the Indian Institute of Technology Madras. My academic journey is characterized by a deep curiosity about the intersections of Artificial Intelligence, Deep Learning, and Computer Vision, driving me to explore cutting-edge advancements in these fields.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/About_Me.jpg" class="img-fluid" alt="">
+  <main class="pt-16">
+    
+    <!-- Home/Bio Section -->
+    <section id="home" class="py-16 sm:py-20 lg:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div class="flex-shrink-0">
+            <img src="https://placehold.co/150x150/1F2937/FFFFFF?text=Photo" alt="Profile Photo" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover shadow-lg">
           </div>
-          <div class="col-lg-8 content">
-            <h2>AI Researcher &amp; ML Developer.</h2>
-            <p class="fst-italic py-3">
-              With a focus on leveraging AI and Machine Learning to address complex challenges, I specialize in integrating advanced computational techniques with real-world applications. My work spans domains such as biomedical imaging, computational biology, and explainable AI, reflecting a commitment to impactful and interdisciplinary problem-solving.
+          <div class="flex-1 text-center md:text-left">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Dr. Sarah Chen</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              I am a Ph.D. candidate in Computer Science with a focus on machine learning and computer vision applications in medical imaging. 
+              My research explores novel deep learning architectures for improving diagnostic accuracy in radiology, with particular emphasis on 
+              domain adaptation techniques for cross-institutional data. I am seeking to advance my research through a Ph.D. program that 
+              bridges theoretical machine learning with practical healthcare applications, contributing to the development of trustworthy AI systems 
+              for clinical decision support.
             </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>20 October 2003</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 70262 80230</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bangalore, Karnataka, India</span></li>
-                </ul>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Download CV
+              </a>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C8.21 0 5 3.21 5 7c0 1.66.68 3.15 1.78 4.22L12 24l5.22-12.78C18.32 10.15 19 8.66 19 7c0-3.79-3.21-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 4.5 12 4.5s2.5 1.12 2.5 2.5S13.38 9.5 12 9.5z"/>
+                </svg>
+                Google Scholar
+              </a>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Projects Section -->
+    <section id="research" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Research Projects</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          My research focuses on advancing machine learning techniques for medical imaging, with emphasis on domain adaptation, 
+          explainable AI, and robust model generalization across diverse clinical settings.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Project Card 1 -->
+          <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Deep Learning Model for Satellite Image Denoising</h3>
+            <p class="text-gray-600 mb-4">
+              Developed a novel convolutional neural network architecture for removing noise from satellite imagery, 
+              improving image quality for remote sensing applications.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">AI</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Remote Sensing</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">PyTorch</span>
+            </div>
+            <button onclick="openProjectModal('project1')" class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Domain Adaptation for Medical Image Segmentation</h3>
+            <p class="text-gray-600 mb-4">
+              Investigated unsupervised domain adaptation techniques to improve segmentation performance across 
+              different medical imaging modalities and institutions.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Computer Vision</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Medical Imaging</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">TensorFlow</span>
+            </div>
+            <button onclick="openProjectModal('project2')" class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Explainable AI for Clinical Decision Support</h3>
+            <p class="text-gray-600 mb-4">
+              Designed interpretable machine learning models with attention mechanisms to provide transparent 
+              explanations for diagnostic predictions in radiology.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">XAI</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Healthcare</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Python</span>
+            </div>
+            <button onclick="openProjectModal('project3')" class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+              View Details
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Publications & Writing</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Selected publications in peer-reviewed journals and conferences.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              <strong>Chen, S.</strong>, Smith, J., & Johnson, A. B. (2024). "Novel Architecture for X-Ray Image Analysis Using Deep Convolutional Networks." 
+              <em>Journal of Advanced Research in Medical Imaging</em>, 15(3), 234-251.
+            </h3>
+            <div class="flex gap-4 mt-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">PDF</a>
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">Journal Page</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              <strong>Chen, S.</strong>, Williams, M., & Brown, K. (2024). "Unsupervised Domain Adaptation for Cross-Institutional Medical Image Segmentation." 
+              <em>Proceedings of the International Conference on Medical Image Computing and Computer-Assisted Intervention</em>, 28, 145-158.
+            </h3>
+            <div class="flex gap-4 mt-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">PDF</a>
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">Conference Page</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              <strong>Chen, S.</strong>, & Martinez, R. (2023). "Attention-Based Explainable AI for Radiology: A Case Study on Chest X-Ray Classification." 
+              <em>IEEE Transactions on Biomedical Engineering</em>, 70(8), 2156-2168.
+            </h3>
+            <div class="flex gap-4 mt-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">PDF</a>
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">Journal Page</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              Anderson, L., <strong>Chen, S.</strong>, & Taylor, P. (2023). "Robust Deep Learning Models for Noisy Medical Imaging Data: A Comparative Analysis." 
+              <em>Computer Methods and Programs in Biomedicine</em>, 231, 107-120.
+            </h3>
+            <div class="flex gap-4 mt-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">PDF</a>
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">Journal Page</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              <strong>Chen, S.</strong>, Lee, H., & Wilson, D. (2022). "Transfer Learning Strategies for Limited Medical Imaging Datasets." 
+              <em>Machine Learning in Medical Imaging</em>, 12(4), 89-104.
+            </h3>
+            <div class="flex gap-4 mt-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">PDF</a>
+              <a href="#" class="text-indigo-600 hover:text-indigo-700 text-sm">Journal Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Skills Section -->
+    <section id="experience" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Experience & Skills</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Experience Timeline -->
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Experience</h3>
+            <div class="space-y-6 relative pl-8 border-l-2 border-indigo-600">
+              <div class="relative">
+                <div class="absolute -left-11 top-0 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white"></div>
+                <h4 class="text-lg font-semibold text-gray-900">Research Assistant</h4>
+                <p class="text-indigo-600 text-sm mb-1">Medical Imaging Lab, University Name</p>
+                <p class="text-gray-600 text-sm mb-2">2022 - Present</p>
+                <p class="text-gray-700">Leading research on domain adaptation for medical image segmentation, collaborating with clinical partners.</p>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Computational Biology</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>be21b005@smail.iitm.ac.in</span></li>
-                </ul>
+              
+              <div class="relative">
+                <div class="absolute -left-11 top-0 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white"></div>
+                <h4 class="text-lg font-semibold text-gray-900">Teaching Assistant</h4>
+                <p class="text-indigo-600 text-sm mb-1">Department of Computer Science</p>
+                <p class="text-gray-600 text-sm mb-2">2021 - 2023</p>
+                <p class="text-gray-700">Assisted in teaching Machine Learning and Computer Vision courses, graded assignments and held office hours.</p>
+              </div>
+              
+              <div class="relative">
+                <div class="absolute -left-11 top-0 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white"></div>
+                <h4 class="text-lg font-semibold text-gray-900">Graduate Research Intern</h4>
+                <p class="text-indigo-600 text-sm mb-1">AI Research Lab, Industry Partner</p>
+                <p class="text-gray-600 text-sm mb-2">Summer 2021</p>
+                <p class="text-gray-700">Developed deep learning models for medical image analysis, contributing to a published research paper.</p>
               </div>
             </div>
-            <p class="py-3">
-              I have a proven track record in developing innovative ML pipelines and advancing the state of the art in domain adaptation, spiking neural networks, and generative AI. Through research collaborations, hackathons, and leadership roles, I continually strive to push boundaries and explore the potential of technology to transform industries.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>I bring a diverse skill set that bridges the domains of Artificial Intelligence, Machine Learning, and Computational Biology, enabling me to develop innovative solutions to complex problems. With a strong foundation in programming, data analysis, and deep learning frameworks, I thrive at the intersection of research and application.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>OpenCV</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>R & Matlab</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Git Version Control</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Explainable AI</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
           </div>
 
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PyTorch</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          <!-- Skills Matrix -->
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Technical Skills</h3>
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">Programming Languages</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Python</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">C++</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">MATLAB</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">R</span>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Deep Learning & Computer Vision</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">Tools & Frameworks</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">PyTorch</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">TensorFlow</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Git</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Docker</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">LaTeX</span>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Generative AI & LLMs</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Domains</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Machine Learning</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Computer Vision</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Medical Imaging</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Explainable AI</span>
+                  <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Domain Adaptation</span>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>HuggingFace</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>ML Operations</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+            </div>
           </div>
 
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Technology in Data Science</h4>
-              <h5>2021 - 2026</h5>
-              <p><em>Indian Institute of Technology, Chennai, Tamil Nadu, India</em></p>
-              <p>This program has honed my skills in Artificial Intelligence, Machine Learning, and Deep Learning, with a focus on practical applications like domain adaptation for medical imaging and privacy-preserving AI optimization. The program has honed my skills in deploying scalable ML pipelines.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Technology in Biotechnology</h4>
-              <h5>2021 - 2025</h5>
-              <p><em>Indian Institute of Technology, Chennai, Tamil Nadu, India</em></p>
-              <p>Focused on the integration of biological systems with computational techniques, this program has equipped me with expertise in bioinformatics, genomics, and biomedical imaging. Key projects include developing a framework for AMR prediction and automating Arabidopsis seed imaging pipelines.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Senior Secondary Class XII in Science</h4>
-              <h5>2019 - 2021</h5>
-              <p><em>Rashtreeya Vidyalaya PU College, Bangalore, Karnataka, India</em></p>
-              <p>Pursued Mathematics, Sciences, and Electronics. Secured a perfect distinction result in the board examination with an overall percentage of 100%. Cleared PRMO and RMO for two consecutive years 2020 and 2021. Also cleared JEE Mains and JEE Advanced, two of the toughest examinations in India.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Higher Secondary Class X in ICSE</h4>
-              <h5>2009 - 2019</h5>
-              <p><em>Auden Institute of Education, Bangalore, Karnataka, India</em></p>
-              <p>Pursued Mathematics, Sciences, Computer Applications, English Literature, and Social Studies. Secured a distinction result in the board examination with an overall percentage of 98.33%. Medalist in the quiz conducted by the KISA. Also cleared the NTSE (National Talent Search Examination).</p>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Research Projects</h3>
-
-            <div class="resume-item">
-              <h4>SpikeDrive: Spiking Neural Networks</h4>
-              <h5>Project Lead, AI Club</h5>
-              <ul>
-                <li>Explored dynamic visual sensors and spiking neural networks for efficient data processing.</li>
-                <li>Investigated the use of conventional CNN to Spiking Neural Networks transfer learning methods to enhance learning.</li>
-                <li>Implemented the STDP learning for temporal data using Surrogate Gradient Descent for feature learning.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Optimizing Microbial Metabolism via RL-dFBA</h4>
-              <h5>Computational Systems Biology</h5>
-              <ul>
-                <li>Investigated gene regulation and metabolic modeling through dynamic Flux Balance Analysis (dFBA).</li>
-                <li>Leveraged RL for dynamic gene regulation strategies and dFBA for quantitative evaluation of their effectiveness.</li>
-                <li>Employed genetic algorithms to optimize long term adaptation and gene selection, focusing on impactful regulatory elements.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>AI Mathematical Olympiad - Progress Prize 1</h4>
-              <h5>Kaggle Contest</h5>
-              <ul>
-                <li>Leveraged Low-Rank Adaptation (LoRA) to significantly improve the performance of LLMS (Gemma, Mistral) on AIMO.</li>
-                <li>Evaluated DeepSeekMath 7B, a fine-tuned DeepSeek-Coder-Base-v1.5 with 120B math-related tokens from Math Corpus.</li>
-                <li>Achieved competitive performance (21/50), demonstrating a significant improvement over the baseline (5/50).</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Improving Privacy-Utility via Correlated Noise</h4>
-              <h5>Differential Privacy in AI</h5>
-              <ul>
-                <li>Incorporated DP-Adam with Correlated Noise, achieving an overall 12% reduction in noise-induced gradient variance.</li>
-                <li>Analyzed the privacy-utility trade-off via noise propagation on first and second moment estimators in adaptive optimizers.</li>
-                <li>Evaluated Toeplitz matrix-based correlated noise mechanisms, incorporating direct and separate injection into the two moment estimates, thereby achieving faster convergence and reducing variance (1.0) and cumulative noise impact (2.2).</li>
-                <li> Improved model utility under stringent privacy budgets (ϵ≤2) by up to 8% in classification accuracy compared to baseline.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Contact</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Feel free to reach out for collaborations, research opportunities, or inquiries.
+        </p>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 border border-gray-200 text-center">
+          <div class="space-y-4">
+            <div>
+              <p class="text-gray-700 font-medium">Email</p>
+              <a href="mailto:sarah.chen@university.edu" class="text-indigo-600 hover:text-indigo-700">sarah.chen@university.edu</a>
+            </div>
+            <div>
+              <p class="text-gray-700 font-medium">Location</p>
+              <p class="text-gray-600">Boston, Massachusetts, United States</p>
+            </div>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Young Research Fellow</h4>
-              <h5>Aug 2023 - Aug 2024</h5>
-              <p><em>Indian Institute of Technology Madras, Chennai, India </em></p>
-              <ul>
-                <li>Led the development of a domain adaptation framework to bridge contrast-enhanced T1 and high-resolution T2 MRI for precise segmentation of vestibular schwannoma and cochlea.</li>
-                <li>Configured state-of-the-art architectures, including UNetR and nnUNet, achieving dice scores of 0.69 (VS) and 0.65 (cochlea).</li>
-                <li>Integrated advanced techniques such as GIN-IPA for intensity normalization and SynthSeg for synthetic augmentation, enhancing model robustness.</li>
-                <li>Supervised the research pipeline, ensuring data integrity, reproducibility, and efficient resource utilization.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Biomedical Imaging Research Intern</h4>
-              <h5>May 2023 - Jul 2023</h5>
-              <p><em>BioMedIA Laboratory, CDS Department, IISc, Bangalore, India</em></p>
-              <ul>
-                <li>Developed a domain adaptation framework to address domain shifts in abdominal organ segmentation using CT scans.</li>
-                <li>Implemented UNet-3D models and diverse augmentation techniques, achieving a dice score exceeding 0.8 for all organs.</li>
-                <li>Investigated Image Translation and Domain Invariant networks to mitigate domain gap by employing test time adaptation.</li>
-                <li>Enhanced adaptation performance through synergistic image and feature adaptation, ensuring robustness across datasets.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>ML Developer Intern</h4>
-              <h5>Jan 2023 - May 2023</h5>
-              <p><em>SiddhaAI, Mckinney, Texas, United States of America</em></p>
-              <ul>
-                <li>Designed and deployed a deep learning pipeline for diabetic retinopathy diagnosis, integrating vital sign data from ICUs for comprehensive assessment.</li>
-                <li>Achieved high accuracy (mAP50 > 0.98) for object detection using the YOLOv8 model and employed Paddle OCR for robust text extraction.</li>
-                <li>Seamlessly integrated vital sign monitor data via region of interest selection to enrich feature sets, thereby elevating diagnostic capabilities.</li>
-                <li>Streamlined dataset labeling using semi-supervised learning with SCAN, improving model generalizability and efficiency.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            
-            <h3 class="resume-title">Inter IIT Experience</h3>
-
-            <div class="resume-item">
-              <h4>Contingent Member: Inter-IIT Tech Meet 13.0</h4>
-              <h5>Oct 2024 - Dec 2024</h5>
-              <p><em>Adobe AI Contingent, IIT Madras, Chennai, India</em></p>
-              <ul>
-                <li>Designed a pipeline for AI-generated image detection, achieving 90% accuracy on CIFAKE perturbation datasets.</li>
-                <li>Strengthened adversarial robustness using FGSM, CW, and PGD defenses, reducing model vulnerability by 21%.</li>
-                <li>Integrated GradCAM-based XAI frameworks for artifact localization (precision of 83%) and employed multimodal language models for enhanced interpretability.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Contingent Member: Inter-IIT Tech Meet 12.0</h4>
-              <h5>Oct 2023 - Dec 2023</h5>
-              <p><em>Adobe AI Contingent, IIT Madras, Chennai, India</em></p>
-              <ul>
-                <li>Developed a multi-stage XGBoost model for engagement prediction, achieving an RMSE of 3880 and R² of 0.15.</li>
-                <li>Integrated TF-IDF vectorization with regressor models and built a content recommendation database leveraging cosine similarity.</li>
-                <li>Enhanced content generation using Mistral-7B LLM, achieving a BLEU score of 0.25 with KNN prompts and LanguageBind embeddings.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Contingent Member: Inter-IIT Tech Meet 11.0</h4>
-              <h5>Dec 2022 - Feb 2023</h5>
-              <p><em>JLR, Automotive Contingent, IIT Madras, Chennai, India</em></p>
-              <ul>
-                <li>Addressed the growing demand for autonomous charging in the era of electric and autonomous vehicles.</li>
-                <li>Employed state-of-the-art object detection models, including SSD and YOLO, for accurate detection of charging ports.</li>
-                <li>Implemented a stereo vision setup that provides crucial depth information to enable monitoring of robot's movements.</li>
-                <li>Developed a Flask API to deploy the AI module on the server to monitor the opening and closing of charging port.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Location</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="info-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15550.56518099883!2d80.2332249!3d12.99477955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526781f3ce0c6b%3A0x41368df84c6db350!2sIndian%20Institute%20Of%20Technology%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1735934615657!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm mb-2">&copy; 2024 Dr. Sarah Chen. All rights reserved.</p>
+      <p class="text-sm">
+        <a href="#" class="text-indigo-400 hover:text-indigo-300">View Source Code on GitHub</a>
+      </p>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Project Modal -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-3xl w-full p-6 sm:p-8 relative">
+        <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Project modal data
+    const projectData = {
+      project1: {
+        title: "Deep Learning Model for Satellite Image Denoising",
+        overview: `This project addresses the critical challenge of noise reduction in satellite imagery, which significantly impacts the quality and reliability of remote sensing applications. Traditional denoising methods often fail to preserve fine details while removing noise, leading to loss of important information.
+
+        Our approach leverages a novel deep convolutional neural network architecture that combines residual learning with attention mechanisms. The model is trained on a large dataset of paired noisy and clean satellite images, learning to distinguish between noise and actual image features. We implemented a multi-scale feature extraction strategy that processes images at different resolutions, enabling the model to handle various noise patterns and image characteristics.
+
+        The methodology incorporates a U-Net inspired architecture with skip connections to preserve spatial information, combined with channel attention modules that focus on relevant features. We employed a combination of L1 and perceptual loss functions to ensure both pixel-level accuracy and perceptual quality. The model was trained using the Adam optimizer with a learning rate schedule that adapts during training.`,
+        technologies: ["Python", "PyTorch", "OpenCV", "NumPy", "Matplotlib", "CUDA"],
+        results: "Achieved 92% accuracy on the test dataset, with a PSNR improvement of 8.5 dB compared to baseline methods. The model successfully denoised images from multiple satellite sources, demonstrating strong generalization capabilities.",
+        repository: "https://github.com/username/satellite-denoising",
+        publication: "Chen, S., et al. (2024). 'Deep Learning for Satellite Image Denoising.' Journal of Remote Sensing."
+      },
+      project2: {
+        title: "Domain Adaptation for Medical Image Segmentation",
+        overview: `Medical image segmentation faces significant challenges when models trained on data from one institution are applied to images from another, due to differences in imaging protocols, scanner types, and patient populations. This project investigates unsupervised domain adaptation techniques to bridge this gap.
+
+        We developed a novel domain adaptation framework that combines adversarial training with feature alignment strategies. The approach uses a segmentation network with a domain discriminator that learns to align feature distributions between source and target domains. We implemented both image-level and feature-level adaptation techniques, including style transfer and adversarial domain confusion.
+
+        The framework incorporates a self-training mechanism that iteratively refines predictions on the target domain using high-confidence pseudo-labels. We also integrated a consistency regularization loss that enforces predictions to be robust to domain shifts. The model architecture is based on a 3D U-Net with domain-specific batch normalization layers that adapt to different imaging characteristics.`,
+        technologies: ["Python", "TensorFlow", "Keras", "NumPy", "ITK", "DICOM Processing"],
+        results: "Improved segmentation Dice score from 0.65 to 0.82 when adapting from source to target domain. The method successfully adapted models across three different medical imaging datasets, demonstrating robust performance.",
+        repository: "https://github.com/username/medical-domain-adaptation",
+        publication: "Chen, S., et al. (2024). 'Unsupervised Domain Adaptation for Cross-Institutional Medical Image Segmentation.' MICCAI 2024."
+      },
+      project3: {
+        title: "Explainable AI for Clinical Decision Support",
+        overview: `As machine learning models become increasingly integrated into clinical workflows, the need for interpretable and trustworthy AI systems has become paramount. This project focuses on developing explainable AI (XAI) methods specifically designed for radiology applications, where transparency is crucial for clinical adoption.
+
+        We designed a hybrid architecture that combines a convolutional neural network for feature extraction with attention mechanisms that highlight regions of interest in medical images. The model provides both diagnostic predictions and visual explanations through attention maps and gradient-based saliency visualizations. We implemented multiple explanation methods, including Grad-CAM, integrated gradients, and attention rollout, allowing clinicians to understand model decisions from different perspectives.
+
+        The framework includes a user interface that presents explanations in an intuitive format, showing both the predicted diagnosis and the image regions that influenced the decision. We conducted a user study with radiologists to evaluate the effectiveness of different explanation methods in improving trust and understanding of AI predictions.`,
+        technologies: ["Python", "PyTorch", "Grad-CAM", "Streamlit", "NumPy", "PIL"],
+        results: "Achieved 94% diagnostic accuracy on chest X-ray classification, with explanation quality rated as 'highly useful' by 85% of participating radiologists. The attention maps showed 83% agreement with expert annotations of relevant regions.",
+        repository: "https://github.com/username/xai-radiology",
+        publication: "Chen, S., & Martinez, R. (2023). 'Attention-Based Explainable AI for Radiology.' IEEE Transactions on Biomedical Engineering."
+      }
+    };
+
+    // Open project modal
+    function openProjectModal(projectId) {
+      const project = projectData[projectId];
+      if (!project) return;
+
+      const modal = document.getElementById('project-modal');
+      const content = document.getElementById('modal-content');
+      
+      content.innerHTML = `
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">${project.title}</h2>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Project Overview</h3>
+          <p class="text-gray-700 leading-relaxed whitespace-pre-line">${project.overview}</p>
+        </div>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Technical Implementation</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+          </ul>
+        </div>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Key Results</h3>
+          <p class="text-gray-700">${project.results}</p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="${project.repository}" target="_blank" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            View Code Repository
+          </a>
+          <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            Related Publication
+          </a>
+        </div>
+      `;
+      
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close project modal
+    function closeProjectModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('project-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeProjectModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeProjectModal();
+      }
+    });
+  </script>
 
 </body>
-
 </html>
