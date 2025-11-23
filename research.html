@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Anshul Bagaria</title>
+  <meta name="description" content="Research projects of Anshul Bagaria">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      letter-spacing: -0.01em;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  
+  <!-- Fixed Navigation Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center">
+          <a href="index.html" class="text-xl sm:text-2xl font-semibold text-slate-900 tracking-tight">Anshul Bagaria</a>
+          <span class="ml-4 text-xs sm:text-sm text-slate-600 hidden lg:inline border-l border-gray-200 pl-4">Potential PhD candidate in Computer Science</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Home</a>
+          <a href="research.html" class="text-sm font-medium text-slate-900 border-b-2 border-slate-900 pb-1">Research</a>
+          <a href="publications.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Publications</a>
+          <a href="education.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Education</a>
+          <a href="projects.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Projects</a>
+          <a href="experience.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Experience</a>
+          <a href="skills.html" class="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Skills</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-slate-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-4 space-y-2">
+        <a href="index.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Home</a>
+        <a href="research.html" class="block py-2 text-sm font-medium text-slate-900 border-b border-slate-200">Research</a>
+        <a href="publications.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Publications</a>
+        <a href="education.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Education</a>
+        <a href="projects.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Course Projects</a>
+        <a href="experience.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Experience</a>
+        <a href="skills.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Skills</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    
+    <!-- Research Projects Section -->
+    <section id="research" class="py-20 sm:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Research Projects</h2>
+          <div class="w-16 h-1 bg-slate-900 mx-auto mb-6"></div>
+          <p class="text-base leading-relaxed text-slate-600 max-w-3xl mx-auto">
+            My research spans machine learning applications in medical imaging, multimodal AI, responsible AI systems, and computational biology. 
+            I focus on domain adaptation, explainable AI, bias mitigation, and developing robust AI systems for healthcare applications.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Project Card 1 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Quantifying and Mitigating Severity Bias in Medical LLMs</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Guide: Dr. Balaraman Ravindran</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Investigating bias in clinical LLMs using oncology narratives from MIMIC-III, developing severity-conditioned attention 
+              and contrastive representation learning for bias mitigation.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">LLMs</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Bias Mitigation</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Healthcare</span>
+            </div>
+            <button onclick="openProjectModal('project1')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">INSIGHT: Multimodal Artifact-Guided AI Image Detection</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Published a pre-print on arXiv</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Designed a framework combining visual and linguistic reasoning for AI-generated image detection, achieving 90% accuracy 
+              with GradCAM-based artifact localization and LLM explainability.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Multimodal AI</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">XAI</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Computer Vision</span>
+            </div>
+            <button onclick="openProjectModal('project2')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Unsupervised Cross-Modality Adaptation for Brain Tumor MRI</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Guide: Dr. Arun K. Thittai</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Engineered intensity-mapping and correlation-aware augmentations with causality-guided mechanisms for cross-modal transfer, 
+              achieving Dice scores of 0.63 (VS) and 0.60 (Cochlea).
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Domain Adaptation</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Medical Imaging</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">nnUNet</span>
+            </div>
+            <button onclick="openProjectModal('project3')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Multimodal Simulation of User Behavior and KPI-Driven Content Generation</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Bronze Medal in Inter-IIT Tech Meet 12.0</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Developed a multi-stage XGBoost pipeline for robust prediction under cross-brand and temporal domain shifts. 
+              Integrated Mistral-7B with LanguageBind embeddings in KPI-aware RAG framework.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">XGBoost</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">LLMs</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">RAG</span>
+            </div>
+            <button onclick="openProjectModal('project4')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Generative AI-Driven Super-Resolution for Lunar Terrain Mapping</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Bronze Medal in Inter-IIT Tech Meet 11.0</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Developed a super-resolution framework (SRUN + SORTN) to generate 30 cm-resolution from 10 m TMC data. 
+              Achieved PSNR 28.26, SSIM 0.79 at 4× upscaling.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Generative AI</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Super-Resolution</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Remote Sensing</span>
+            </div>
+            <button onclick="openProjectModal('project5')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Domain Invariant Multi-Organ Segmentation via Contrastive Adaptation</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Guide: Dr. Vaanathi Sundaresan</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Investigated test-time domain adaptation frameworks for multi-organ segmentation under cross-scanner shifts. 
+              Integrated contrastive alignment with transformer encoders to learn domain-invariant features.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Domain Adaptation</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Transformers</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Medical Imaging</span>
+            </div>
+            <button onclick="openProjectModal('project6')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 7 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Causality Driven Uplift Modeling for Customer Engagement Optimization</h3>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Applied causal inference frameworks to estimate treatment effects, revealing 3–5% uplift in advisor bookings. 
+              Estimated heterogeneous treatment effects via CATE models for policy optimization.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Causal Inference</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Uplift Modeling</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Business Analytics</span>
+            </div>
+            <button onclick="openProjectModal('project7')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 8 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Multimodal Learning for AI-Driven Diabetic Retinopathy Diagnosis</h3>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Built a multimodal diagnostic framework combining retinal imaging and physiological signals for DR detection. 
+              Achieved mAP50 > 0.98 in vital sign extraction using YOLOv8 and OCR-based monitor text recognition.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Multimodal AI</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">YOLOv8</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Healthcare</span>
+            </div>
+            <button onclick="openProjectModal('project8')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+          <!-- Project Card 9 -->
+          <div class="bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all p-6 shadow-sm hover:shadow-md group">
+            <h3 class="text-lg font-semibold text-slate-900 mb-3 leading-tight">Automated Microscopic Phenotyping for Arabidopsis Seeds</h3>
+            <p class="text-xs text-slate-500 mb-2 font-medium">Guide: Prof. R Baskar</p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+              Developed an automated imaging pipeline for phenotypic classification of Arabidopsis seed lines. 
+              Implemented OpenCV-based segmentation and watershed clustering, achieving 94.5% accuracy (AUC: 0.75).
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Computer Vision</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">OpenCV</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded text-xs font-medium">Bioinformatics</span>
+            </div>
+            <button onclick="openProjectModal('project9')" class="w-full px-4 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+              View Details
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm mb-3">&copy; 2025 Anshul Bagaria. All rights reserved.</p>
+      <p class="text-sm">
+        <a href="https://github.com/anshul-2010" target="_blank" class="text-slate-300 hover:text-white transition-colors">View Source Code on GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-4xl w-full p-8 sm:p-10 relative shadow-2xl border border-slate-200">
+        <button onclick="closeProjectModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/project-modals.js"></script>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
