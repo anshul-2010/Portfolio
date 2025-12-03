@@ -2,13 +2,13 @@
 const projectData = {
     project1: {
       title: "Quantifying and Mitigating Severity Bias in Medical Large Language Models",
-      overview: `This research addresses critical bias issues in clinical large language models (LLMs) that can lead to unfair or inaccurate medical assessments. The project investigates how severity bias manifests in medical LLMs when processing oncology narratives from the MIMIC-III dataset, focusing on both fairness and factual fidelity.
+      overview: `This research addresses critical bias issues in clinical large language models (LLMs) that can lead to unfair or inaccurate medical assessments. The project investigates how severity bias manifests in medical LLMs when processing oncology narratives from the MIMIC-IV dataset, focusing on both fairness and factual fidelity.
   
       The research develops an Oncology Severity Glossary and implements a graph-based extraction pipeline to map contextual severity patterns in clinical narratives. This enables systematic identification of how severity information influences model predictions and where biases may emerge. The approach combines natural language processing techniques with graph neural networks to capture complex relationships between clinical concepts and severity indicators.
   
       To mitigate identified biases, the project proposes severity-conditioned attention mechanisms that explicitly account for severity information during model training and inference. Additionally, contrastive representation learning is employed to learn severity-aware embeddings that better distinguish between different severity levels while maintaining clinical accuracy. The framework incorporates severity calibration heads and reward-guided fine-tuning strategies to optimize the trade-off between bias mitigation and model interpretability.`,
-      technologies: ["Python", "PyTorch", "Transformers", "HuggingFace", "Graph Neural Networks", "NLP", "MIMIC-III", "Contrastive Learning"],
-      results: "Investigating bias in clinical LLMs using oncology narratives from MIMIC-III to assess fairness and factual fidelity. Developed an Oncology Severity Glossary and graph-based extraction pipeline to map contextual severity patterns. Proposed severity-conditioned attention and contrastive representation learning for severity-aware modeling. Incorporating severity calibration heads and reward-guided fine-tuning for bias mitigation and interpretability.",
+      technologies: ["Python", "PyTorch", "Transformers", "HuggingFace", "Graph Neural Networks", "NLP", "MIMIC-IV", "Contrastive Learning"],
+      results: "Investigating bias in clinical LLMs using oncology narratives from MIMIC-IV to assess fairness and factual fidelity. Developed an Oncology Severity Glossary and graph-based extraction pipeline to map contextual severity patterns. Proposed severity-conditioned attention and contrastive representation learning for severity-aware modeling. Incorporating severity calibration heads and reward-guided fine-tuning for bias mitigation and interpretability.",
       repository: "#",
       guide: "Dr. Balaraman Ravindran",
       publication: "Masters Thesis, Centre for Responsible AI (CeRAI), IIT Madras (Jul 2025 - Ongoing)"
