@@ -10,8 +10,11 @@ const projectData = {
       technologies: ["Python", "PyTorch", "Transformers", "HuggingFace", "Graph Neural Networks", "NLP", "MIMIC-IV", "Contrastive Learning"],
       results: "Investigating bias in clinical LLMs using oncology narratives from MIMIC-IV to assess fairness and factual fidelity. Developed an Oncology Severity Glossary and graph-based extraction pipeline to map contextual severity patterns. Proposed severity-conditioned attention and contrastive representation learning for severity-aware modeling. Incorporating severity calibration heads and reward-guided fine-tuning for bias mitigation and interpretability.",
       repository: "#",
+      publication_url: "#",
       guide: "Dr. Balaraman Ravindran",
-      publication: "Masters Thesis, Centre for Responsible AI (CeRAI), IIT Madras (Jul 2025 - Ongoing)"
+      publication: "Masters Thesis, Centre for Responsible AI (CeRAI), IIT Madras (Jul 2025 - Ongoing)",
+      disable_repository: true,
+      disable_publication: true
     },
     project2: {
       title: "INSIGHT: Multimodal Artifact-Guided Detection of AI-Generated Images",
@@ -22,8 +25,11 @@ const projectData = {
       To improve robustness, the system integrates GradCAM-based artifact localization that highlights specific regions where AI-generated artifacts are most likely to occur. This spatial attention mechanism helps focus the model on relevant image regions. The framework also employs adversarial defense ensembles and knowledge distillation techniques to enhance model resilience against adversarial attacks, reducing vulnerability by 21% while maintaining high detection accuracy.`,
       technologies: ["Python", "PyTorch", "GradCAM", "LLMs", "Computer Vision", "Adversarial Defense", "Knowledge Distillation"],
       results: "Achieved 90% accuracy on the CIFAKE perturbation dataset. Integrated GradCAM-based artifact localization with precision of 83%. Enhanced robustness through adversarial defense ensemble, reducing model vulnerability by 21%. Won Bronze Medal in Inter-IIT Tech Meet 13.0.",
-      repository: "#",
-      publication: "Inter-IIT Tech Meet 13.0, Adobe Research Team AI Challenge (Oct-Dec 2024)"
+      repository: "https://github.com/anshul-2010/INSIGHT",
+      publication_url: "https://arxiv.org/abs/2511.22351",
+      publication: "Inter-IIT Tech Meet 13.0, Adobe Research Team AI Challenge (Oct-Dec 2024)",
+      disable_repository: false,
+      disable_publication: false
     },
     project3: {
       title: "Unsupervised Cross-Modality Adaptation for Brain Tumor MRI Segmentation",
@@ -47,7 +53,7 @@ const projectData = {
       For content generation, the system integrates Mistral-7B large language model with LanguageBind embeddings in a KPI-aware Retrieval-Augmented Generation (RAG) framework. This allows the model to generate content that is not only contextually relevant but also optimized for specific key performance indicators. A vector-indexed KPI database is built to enable efficient semantic prompt retrieval using cosine similarity, allowing the system to quickly identify and retrieve the most relevant content templates and examples for generation.`,
       technologies: ["Python", "XGBoost", "Mistral-7B", "LanguageBind", "RAG", "Vector Databases", "NLP"],
       results: "Developed a multi-stage XGBoost pipeline for robust prediction under cross-brand and temporal domain shifts. Integrated Mistral-7B with LanguageBind embeddings in KPI-aware RAG framework for content generation. Built a vector-indexed KPI database enabling efficient semantic prompt retrieval via cosine similarity. Won Bronze Medal in Inter-IIT Tech Meet 12.0.",
-      repository: "#",
+      repository: "https://github.com/anshul-2010/Content-Behavior-Simulation-Challenge",
       publication: "Inter-IIT Tech Meet 12.0, Adobe Research MDSR Team AI Challenge (Oct-Dec 2023)"
     },
     project5: {
@@ -71,7 +77,7 @@ const projectData = {
       Transformer encoders are employed to capture long-range dependencies and contextual information that are crucial for accurate organ segmentation. The framework operates at test time, meaning it can adapt to new domains without requiring retraining on domain-specific data. This makes it particularly valuable for clinical deployment where scanner diversity is common. The system processes CT scans and segments multiple organs simultaneously, learning to handle variations in image appearance, contrast, and noise levels across different scanners.`,
       technologies: ["Python", "PyTorch", "Transformers", "Contrastive Learning", "Medical Image Processing", "Domain Adaptation", "Multi-Organ Segmentation"],
       results: "Investigated test-time domain adaptation frameworks for multi-organ segmentation under cross-scanner shifts. Integrated contrastive alignment with transformer encoders to learn domain-invariant anatomical features. Achieved steady Dice scores (0.54-0.80) across multi-organ CT segmentation benchmarks despite domain disparity.",
-      repository: "#",
+      repository: "https://github.com/anshul-2010/Research-Intern-IISc",
       guide: "Dr. Vaanathi Sundaresan",
       publication: "Biomedical Image Analysis (BioMedIA) Laboratory, IISc, Bengaluru (May 2023 - Dec 2023)"
     },
@@ -146,13 +152,17 @@ const projectData = {
       </div>
       
       <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200">
-        <a href="${project.repository}" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium">
+        <a href="${project.repository}" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-sm font-medium
+          ${project.disable_repository ? 'bg-slate-400 text-white pointer-events-none cursor-not-allowed'
+            : 'bg-slate-900 text-white hover:bg-slate-800'} " aria-disabled="${project.disable_repository}">
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
           View Code Repository
         </a>
-        <a href="#" class="inline-flex items-center px-5 py-2.5 bg-white text-slate-700 rounded-md hover:bg-slate-50 transition-all text-sm font-medium border border-slate-200">
+        <a href="${project.publication_url}" class="inline-flex items-center px-5 py-2.5 bg-white text-slate-700 rounded-md hover:bg-slate-50 transition-all text-sm font-medium border border-slate-200
+          ${project.disable_publication ? 'bg-slate-200 text-dark pointer-events-none cursor-not-allowed'
+            : 'bg-slate-900 text-dark hover:bg-slate-800'} " aria-disabled="${project.disable_publication}">
           <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
           </svg>
